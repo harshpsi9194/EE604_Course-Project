@@ -1,0 +1,120 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39"
+  },
+  "fixture": {
+    "description": "Repeated NASA astronaut still with a small synthetic translation and 30 blank frames; NOT a live webcam or gesture dataset.",
+    "source": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.24.0/skimage/data/astronaut.png",
+    "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+  },
+  "pipeline": {
+    "metadata": {
+      "mode": "dry-run",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+      "python": "3.12.14",
+      "mediapipe": "0.10.21",
+      "opencv": "4.11.0",
+      "options": {
+        "camera": 0,
+        "video": "/tmp/imouse-check-_7c8ahpr/fixture.avi",
+        "dry_run": true,
+        "no_preview": true,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "max_frames": 0,
+        "seconds": 0,
+        "gain_x": 4.0,
+        "gain_y": 6.0,
+        "swap_winks": false,
+        "no_smoothing": false,
+        "serial_camera": false,
+        "mouse_pause": 0,
+        "metrics": "/workspace/scratch/1c6d2f012e6a/iMouse/results/validation.csv"
+      },
+      "source_fps": 30.0,
+      "screen_size": [
+        1920,
+        1080
+      ],
+      "calibration": {
+        "x": 0.5451181530952454,
+        "y": 0.19898127019405365,
+        "left": 0.3363149148793283,
+        "right": 0.32127761138471744,
+        "roll": -2.5216941918573004
+      }
+    },
+    "counts": {
+      "frames": 180,
+      "face_frames": 150,
+      "dropped_frames": 0
+    },
+    "elapsed_seconds": 1.3831608410000626,
+    "processed_fps": 130.13670909729856,
+    "timings_ms": {
+      "capture_wait_ms": {
+        "median": 1.2119359998905566,
+        "p95": 2.680602199973234
+      },
+      "preprocess_ms": {
+        "median": 0.17812349994983379,
+        "p95": 0.5376007000904769
+      },
+      "inference_ms": {
+        "median": 4.968728999983796,
+        "p95": 10.480223700017174
+      },
+      "control_ms": {
+        "median": 0.07177299994509667,
+        "p95": 0.20400314990638432
+      },
+      "dispatch_ms": {
+        "median": 0.0012219999234730494,
+        "p95": 0.001975500049411493
+      },
+      "read_to_dispatch_ms": {
+        "median": 5.3276830001323106,
+        "p95": 11.573390550165637
+      },
+      "display_ms": {
+        "median": 0.0043669998603945714,
+        "p95": 0.011647349856502754
+      },
+      "loop_ms": {
+        "median": 6.660805500018796,
+        "p95": 12.929533299836745
+      }
+    },
+    "native_action_frames": 0,
+    "native_action_timings_ms": {},
+    "measurement_note": "Read-to-dispatch starts AFTER camera read; excludes sensor/driver and OS display latency. Counts are predictions, NOT accuracy. Dry-run dispatch is NOT OS input latency."
+  },
+  "pause_microbenchmark": {
+    "scope": "Actual PyAutoGUI _handlePause only; excludes native mouse APIs, camera, inference and display.",
+    "samples_per_setting": 30,
+    "pause_seconds": {
+      "0.1": {
+        "median_ms": 100.12835099996664,
+        "p95_ms": 100.20470505002095
+      },
+      "0.0": {
+        "median_ms": 0.06054599998606136,
+        "p95_ms": 0.08202120001215008
+      }
+    }
+  },
+  "synthetic_experiments": {
+    "scope": "Synthetic landmark features; software regression evidence, NOT human gesture accuracy.",
+    "bilateral_blink_trials": 100,
+    "unintended_clicks": 0,
+    "deliberate_winks_per_eye": 30,
+    "emitted_clicks": {
+      "left": 30,
+      "right": 30
+    },
+    "stationary_input_std_px": 2.8989771903765487,
+    "filtered_std_px": 1.0095804642156074
+  }
+}
